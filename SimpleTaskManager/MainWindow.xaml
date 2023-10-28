@@ -1,0 +1,24 @@
+﻿<Window x:Class="SimpleTaskManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleTaskManager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid>
+        <Image Source="/Photo/cpu.jpg"  Stretch="Fill"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ListBox Name="processListBox" HorizontalAlignment="Center" VerticalAlignment="Top"  Width="550" Height="220" Margin="0,20,0,0"/>
+            <StackPanel Grid.Row="1"  Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Background="Green" Foreground="White" Height="30" Width="100" Content="Show Processes" Click="ShowProcesses_Click" />
+                <Button Background="Green" Foreground="White" Height="30" Width="100" Margin="60,0,0,0" Content="New Process" Click="CreateNewProcess_Click"  />
+                <Button Background="Green" Foreground="White" Height="30" Width="100" Margin="60,0,0,0" Content="Kill Process" Click="KillProcess_Click"  />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
